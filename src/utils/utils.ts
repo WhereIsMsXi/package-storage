@@ -1,5 +1,5 @@
 import { StorageType } from "../enum";
-import { EnrichStorage } from "../types";
+import { EnrichData } from "../types";
 
 export function getEnrichData(data: unknown, isSession = true) {
   return {
@@ -11,22 +11,22 @@ export function getEnrichData(data: unknown, isSession = true) {
 }
 
 export function getStorage(data: string) {
-  
-  function isEnrichContent(data: EnrichStorage) {
+
+  function isEnrichData(data: EnrichData) {
     const propArray = ['dataType', 'content', 'type', 'datatime'];
     if(Object.keys(data).length !== propArray.length) return false
     return propArray.every(prop => data.hasOwnProperty(prop));
   }
 
-  let enrichStorage: EnrichStorage
+  let enrichData: EnrichData
   try {
-    enrichStorage = JSON.parse(data);
+     enrichData = JSON.parse(data);
   } catch(error: any) {
     throw new Error('Invalid storage data: ' + error.message);
   }
 
-  if(!isEnrichContent(enrichStorage)) {
+  if(!isEnrichData(enrichData)) {
     throw new Error('storage content is not enrich content, please use native storage api');
   }
-  return enrichStorage.content
+  return enrichData.content
 }
