@@ -1,7 +1,5 @@
 import { getEnrichData, getStorage } from "./utils/utils";
 
-
-
 const session = {
   set(name: string, data: unknown) {
     const enrichData = getEnrichData(data, true);
@@ -23,7 +21,7 @@ const session = {
 const local = {
   set(name: string, data: unknown) {
     const enrichData = getEnrichData(data, false);
-    window.sessionStorage.setItem(name, JSON.stringify(enrichData));
+    window.localStorage.setItem(name, JSON.stringify(enrichData));
   },
   get(name: string) {
     const data = window.localStorage.getItem(name);
