@@ -25,3 +25,19 @@ pnpm build
 ```bash
 pnpm test
 ```
+
+npmjs:
+
+### 安装
+
+```bash
+
+# npm
+npm i @where_is_mr_li/storage
+
+# or yarn
+yarn add @where_is_mr_li/storage
+
+#or pnpm
+pnpm add @where_is_mr_li/storage
+```
