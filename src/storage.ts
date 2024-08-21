@@ -1,5 +1,6 @@
 import { StorageType } from "./enum";
 import { EnrichStorage } from "./types";
+import { getEnrichData } from "./utils/utils";
 
 function isEnrichContent(data: EnrichStorage) {
   const propArray = ['dataType', 'content', 'type', 'datatime'];
@@ -9,13 +10,8 @@ function isEnrichContent(data: EnrichStorage) {
 
 const session = {
   set(name: string, data: unknown) {
-    const enrichContent = {
-      dataType: typeof data,
-      content: data,
-      type: StorageType.SESSION,
-      datatime: Math.floor(Date.now() / 1000),
-    };;
-    window.sessionStorage.setItem(name, JSON.stringify(enrichContent));
+    const enrichData = getEnrichData(data, true);
+    window.sessionStorage.setItem(name, JSON.stringify(enrichData));
   },
   get(name: string) {
     const data = window.sessionStorage.getItem(name);
@@ -42,7 +38,8 @@ const session = {
 };
 const local = {
   set(name: string, data: unknown) {
-
+    const enrichData = getEnrichData(data, false);
+    window.sessionStorage.setItem(name, JSON.stringify(enrichData));
   },
   get(name: string) {
 
