@@ -1,5 +1,5 @@
 {
-  "name": "cli-rollup",
+  "name": "@where_is_mr_li/storage",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -10,9 +10,9 @@
     "test": "jest --no-cache --watchAll --coverage"
   },
   "keywords": [
-    "cli",
     "rollup",
-    "typescript"
+    "typescript",
+    "storage"
   ],
   "author": "sxt",
   "license": "ISC",

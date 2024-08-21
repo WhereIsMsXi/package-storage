@@ -1,23 +1,27 @@
-# cli-rollup
+# @where_is_mr_li/storage
 
-> rollup 快速打包 ESM 模块
+> 对 web storage 的增强和封装
 
 ## 安装依赖
-github:
-```bash
-git clone https://github.com/WhereIsMsXi/cli-rollup
 
-cd cli-rollup
+github:
+
+```bash
+git clone https://github.com/WhereIsMsXi/package-storage
+
+cd package-storage
 
 pnpm i
 ```
 
 ### 打包
+
 ```bash
 pnpm build
 ```
 
 ### 测试
+
 ```bash
 pnpm test
 ```
