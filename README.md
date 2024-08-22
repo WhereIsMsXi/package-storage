@@ -51,7 +51,7 @@ import { session } from "@where_is_mr_li/storage";
 // 存
 session.set("key", "sxt");
 // 取
-session.get("key");
+const result = session.get("key");
 // 删
 session.del("key");
 // 清空
