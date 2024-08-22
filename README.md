@@ -41,3 +41,27 @@ yarn add @where_is_mr_li/storage
 #or pnpm
 pnpm add @where_is_mr_li/storage
 ```
+
+## 使用
+
+```js
+// 导入
+import { session } from "@where_is_mr_li/storage";
+
+// 存
+session.set("key", "sxt");
+// 取
+session.get("key");
+// 删
+session.del("key");
+// 清空
+session.clear();
+
+// 存入 storage 的封装对象
+{
+  "dataType":"string",
+  "content":"sxt",
+  "type":"session",
+  "datetime":1723219200
+}
+```
