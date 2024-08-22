@@ -13,7 +13,7 @@ export function getEnrichData(data: unknown, isSession = true) {
 export function getStorage(data: string) {
 
   function isEnrichData(data: EnrichData) {
-    const propArray = ['dataType', 'content', 'type', 'datatime'];
+    const propArray = ['dataType', 'content', 'type', 'datetime'];
     if(Object.keys(data).length !== propArray.length) return false
     return propArray.every(prop => data.hasOwnProperty(prop));
   }
