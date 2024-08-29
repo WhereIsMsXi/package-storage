@@ -7,7 +7,7 @@
 github:
 
 ```bash
-git clone https://github.com/WhereIsMsXi/package-storage
+git clone https://github.com/WhereIsMsXi/package-storage.git
 
 cd package-storage
 
